@@ -13,14 +13,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell tag="1" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Weibo" id="8jY-cf-d2d">
+                            <tableViewCell tag="1" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Weibo" textLabel="Lab-Ks-fuS" detailTextLabel="lnF-2O-beb" style="IBUITableViewCellStyleSubtitle" id="8jY-cf-d2d">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lab-Ks-fuS">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnF-2O-beb">
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="Jqc-WQ-2Jl" kind="push" id="Yk1-Td-D7d"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -42,19 +57,57 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="12Q-xW-h7r" kind="relationship" relationship="rootViewController" id="FJr-8p-VvL"/>
+                        <segue destination="12Q-xW-h7r" kind="relationship" relationship="rootViewController" id="CVW-qf-SAg"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uX3-lg-KRU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="31" y="-16"/>
         </scene>
+        <!--Weibo Timeline Controller - WebView-->
+        <scene sceneID="U67-Cd-5a3">
+            <objects>
+                <viewController title="WebView" id="Jqc-WQ-2Jl" customClass="WHLWeiboTimelineController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zor-ku-g9y">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lsL-NH-ygq">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lsL-NH-ygq" firstAttribute="bottom" secondItem="Zor-ku-g9y" secondAttribute="bottom" type="default" id="6Nv-Qj-9QR"/>
+                            <constraint firstItem="lsL-NH-ygq" firstAttribute="trailing" secondItem="Zor-ku-g9y" secondAttribute="trailing" type="default" id="Wyp-ah-E2S"/>
+                            <constraint firstItem="lsL-NH-ygq" firstAttribute="top" secondItem="Zor-ku-g9y" secondAttribute="top" type="default" id="Xym-jx-kJd"/>
+                            <constraint firstItem="lsL-NH-ygq" firstAttribute="leading" secondItem="Zor-ku-g9y" secondAttribute="leading" type="default" id="xMg-cu-eX3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="微博时间线" id="TZa-ZA-RXd"/>
+                    <connections>
+                        <outlet property="webView" destination="lsL-NH-ygq" id="UA6-vh-dC1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ye-Fp-WMQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359" y="661"/>
+        </scene>
     </scenes>
     <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
         <class className="WHLWeiboListViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/WHLWeiboListViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="WHLWeiboTimelineController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WHLWeiboTimelineController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
             </relationships>
         </class>
     </classes>

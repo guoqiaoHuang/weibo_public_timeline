@@ -21,6 +21,11 @@ install_resource()
       ;;
   esac
 }
+install_resource 'AQGridView/Resources/AQGridSelection.png'
+install_resource 'AQGridView/Resources/AQGridSelectionGray.png'
+install_resource 'AQGridView/Resources/AQGridSelectionGrayBlue.png'
+install_resource 'AQGridView/Resources/AQGridSelectionGreen.png'
+install_resource 'AQGridView/Resources/AQGridSelectionRed.png'
 install_resource 'NUI/NUI/Resources/NUIBackButtonTemplate.png'
 install_resource 'NUI/NUI/Resources/NUIBarButtonTemplate.png'
 install_resource 'NUI/NUI/Resources/NUIViewBackground.png'

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1BAB02FF168E9AE900D51FA6 /* default_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BAB02FE168E9AE900D51FA6 /* default_avatar.png */; };
+		1BAB0325168EE8AB00D51FA6 /* WHLWeiboTimelineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BAB0324168EE8AB00D51FA6 /* WHLWeiboTimelineController.m */; };
 		1BEE1807168C3AB900DD2033 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEE1806168C3AB900DD2033 /* UIKit.framework */; };
 		1BEE1809168C3AB900DD2033 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEE1808168C3AB900DD2033 /* Foundation.framework */; };
 		1BEE180B168C3AB900DD2033 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEE180A168C3AB900DD2033 /* CoreGraphics.framework */; };
@@ -27,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		1BAB02FE168E9AE900D51FA6 /* default_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = default_avatar.png; path = "../../ruby-china-for-ios/ruby-china-for-ios/Resources/default_avatar.png"; sourceTree = "<group>"; };
+		1BAB0323168EE8AB00D51FA6 /* WHLWeiboTimelineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHLWeiboTimelineController.h; sourceTree = "<group>"; };
+		1BAB0324168EE8AB00D51FA6 /* WHLWeiboTimelineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHLWeiboTimelineController.m; sourceTree = "<group>"; };
 		1BEE1802168C3AB900DD2033 /* weibo_home_line.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo_home_line.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BEE1806168C3AB900DD2033 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1BEE1808168C3AB900DD2033 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -141,6 +144,8 @@
 			children = (
 				1BEE1841168C8C5100DD2033 /* WHLWeiboListViewController.m */,
 				1BEE1840168C8C5000DD2033 /* WHLWeiboListViewController.h */,
+				1BAB0323168EE8AB00D51FA6 /* WHLWeiboTimelineController.h */,
+				1BAB0324168EE8AB00D51FA6 /* WHLWeiboTimelineController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 				1BEE1817168C3AB900DD2033 /* WHLAppDelegate.m in Sources */,
 				1BEE1842168C8C5100DD2033 /* WHLWeiboListViewController.m in Sources */,
 				1BEE1848168C927200DD2033 /* Tweet.m in Sources */,
+				1BAB0325168EE8AB00D51FA6 /* WHLWeiboTimelineController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

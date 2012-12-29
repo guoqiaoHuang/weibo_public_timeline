@@ -105,14 +105,20 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Tweet *tweet = [self.tweets objectAtIndex:indexPath.row];
-
+    
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Weibo"];
+    
+//    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Weibo"];    
+    cell.detailTextLabel.numberOfLines = 0;
+    cell.detailTextLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    cell.detailTextLabel.text = tweet.text;
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:10.0];
+    
     UILabel *cellLabel = (UILabel *)[cell viewWithTag:1];
-    cellLabel.text = tweet.text;
-    cellLabel.font = [UIFont systemFontOfSize:10.0];
+    cellLabel.text = tweet.userName;
+    cellLabel.font = [UIFont systemFontOfSize:8.0];
     
     NSURL *img_url = [NSURL URLWithString:tweet.userAvatar];
-
     
     [cell.imageView setImageWithURL:img_url placeholderImage:[UIImage imageNamed:@"default_avatar.png"]];
     
@@ -121,7 +127,14 @@
 
 //- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 //{
-////    return 100.0;
+//    int textWidth = self.view.frame.size.width - 32 - 40 - 40;
+//    Tweet *tweet = [self.tweets objectAtIndex:indexPath.row];
+//    NSString *text = tweet.text;
+//	CGSize titleSize = [text sizeWithFont:[UIFont systemFontOfSize:10.0]
+//                               constrainedToSize:CGSizeMake(textWidth, MAXFLOAT)
+//                                   lineBreakMode:NSLineBreakByCharWrapping];
+//    return MAX(50, 10 + 2 + titleSize.height);
+//    
 //}
 
 /*
