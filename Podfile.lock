@@ -17,6 +17,9 @@ PODS:
 - RestKit/ObjectMapping (0.20.0pre4)
 - RestKit/Support (0.20.0pre4)
 - SBJson (3.1.1)
+- SDWebImage (3.0):
+  - SDWebImage/Main (= 3.0)
+- SDWebImage/Main (3.0)
 - SOCKit (1.1)
 - SVProgressHUD (0.8)
 - SVPullToRefresh (0.4)
@@ -26,11 +29,12 @@ DEPENDENCIES:
 - NUI
 - RestKit (= 0.20.0.pre4)
 - SBJson
+- SDWebImage
 - SVProgressHUD
 - SVPullToRefresh
 
 SPEC CHECKSUMS:
-  AFNetworking: 4c11f857c9a18d65f4257c90a1e74ac49f0ac422
+  AFNetworking: 0bce3ae41023e080e96b8a2e0d07c94709f72a81
   NUI: edc9542a2ed820e4ee3bfa4c993323e287523c67
   RestKit: 255d85eb5a52112b7df8b901e5fb73fc5a90f3c8
   RestKit/Core: 255d85eb5a52112b7df8b901e5fb73fc5a90f3c8
@@ -39,6 +43,8 @@ SPEC CHECKSUMS:
   RestKit/ObjectMapping: 255d85eb5a52112b7df8b901e5fb73fc5a90f3c8
   RestKit/Support: 255d85eb5a52112b7df8b901e5fb73fc5a90f3c8
   SBJson: d917ef596960a977b6c20235a90810bc306a48f0
+  SDWebImage: afa3965bcb37797ba4ecac49393897b99d1b4be7
+  SDWebImage/Main: afa3965bcb37797ba4ecac49393897b99d1b4be7
   SOCKit: 179515c1a621dd5652a60e9be02ea4adcd25bc9b
   SVProgressHUD: 51042a14e3a716efdbdd73cbb2181fb23ee94389
   SVPullToRefresh: 479bcbbf42c83366f49aab231ed6e94dad928fef

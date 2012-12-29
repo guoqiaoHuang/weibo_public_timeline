@@ -14,6 +14,7 @@
     #import <NUIAppearance.h>
     #import <SVPullToRefresh.h>
     #import <SVProgressHUD.h>
+    #import <UIImageView+WebCache.h>
     #import <Foundation/Foundation.h>
 #endif
 

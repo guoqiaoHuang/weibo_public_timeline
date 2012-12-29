@@ -112,12 +112,17 @@
     cellLabel.font = [UIFont systemFontOfSize:10.0];
     
     NSURL *img_url = [NSURL URLWithString:tweet.userAvatar];
-    NSData *img_data = [[NSData alloc] initWithContentsOfURL:img_url];
-    UIImage *image = [UIImage imageWithData:img_data scale:1.0];
-    cell.imageView.image = image;
-            
+
+    
+    [cell.imageView setImageWithURL:img_url placeholderImage:[UIImage imageNamed:@"default_avatar.png"]];
+    
     return cell;
 }
+
+//- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+////    return 100.0;
+//}
 
 /*
 // Override to support conditional editing of the table view.

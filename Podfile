@@ -5,3 +5,4 @@ pod "NUI"
 pod 'SVPullToRefresh'
 pod 'RestKit', '0.20.0.pre4'
 pod "SVProgressHUD"
+pod "SDWebImage"
